@@ -153,4 +153,4 @@ de red y qué ocurre cuando se vuelve a estar online. (0,5 puntos)**
 
 **(0.5 pto) ¿Se puede decir que mongo sea una bbdd durable?**
 
-
+**(0.5 pto) En qué consiste el paradigma PACELC? Cuál es su diferencia frente a CAP?**
