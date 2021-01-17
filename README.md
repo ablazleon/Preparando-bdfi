@@ -103,7 +103,7 @@ mongoDB en la base de datos con nombre “company” y colección “clients”.
 asegurar la disponibilidad de acceso a los datos, se plantea replicar los datos en múltiples
 contenedores con instancias de mongoDB. Pare ellos se muestra el siguiente esquema de despliegue:**
 
-![Arquitectura]()
+![Arquitectura](https://raw.githubusercontent.com/ablazleon/Preparando-bdfi/main/Screenshot%202021-01-17%20104023.png)
 
 **El personal técnico de la empresa se ha encargado ya de definir los servicios de mongo que se
 necesitan desplegar, por lo que ellos proveen un fichero docker-compose con una serie de servicios
