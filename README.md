@@ -87,7 +87,13 @@ defecto a la base de datos de nombre “test”. Conéctese a la base de datos c
 y ejecute una query para buscar los barrios con el código postal 10280 o 10290:**
 
 ```
-
+use test
+db.stats.find({
+$or:[ 
+  { CP: {$eq: 10280} },
+  { CP: {$eq: 10290} }
+]
+})
 ```
 
 **Pregunta 2 (0.5 puntos) – Obtenga con un comando de la Mongo Shell los barrios que no tengan
@@ -95,7 +101,12 @@ bibliotecas (estos pueden ser los que su array bibliotecas tenga tamaño 0 o dir
 array bibliotecas).**
 
 ```
-
+db.stats.find({
+$or:[ 
+  { bibliotecas: {$eq: []} },
+  { bibliotecas: {$size: 0} }
+]
+})
 ```
 
 **Pregunta 3 (0.5 puntos) – Busque con una única query los barrios que cumplan lo siguiente:** 
