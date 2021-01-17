@@ -208,11 +208,22 @@ Después, para cada comunidad se realiza otra agrupación sobre el id comundiad,
  "_id": ObjectId("571786ca7fdc0dc3e0631317"),
  “comunidad": “Comunidad de Madrid",
  “pop": 3000000,
-}
+ "biggestCity": Madrid,
+ "biggestPop": 3000000,
+ "smallestCity": "Jaramillo de Odón" , //  Pueblo random que me he inventado
+ "smallestPop": 3
+ }
 ```
 
-```
+Finalmente, se proyectan estos campos en un documento con una forma parecida a esta:
 
+```
+{
+ _id: 0,
+ state: "ObjectId("571786ca7fdc0dc3e0631317")",
+ biggestCity: { name: "Madrid", pop: 3000000 },
+ smallestCity: { name: "Jaramillo de Odón", pop: 3 }
+ }
 ```
 
 **Pregunta 6 (1 punto dividido en 3 apartados) –
