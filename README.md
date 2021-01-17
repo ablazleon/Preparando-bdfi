@@ -114,7 +114,15 @@ $or:[
 - **o que no sean de la Comunidad de Madrid pero que tengan más de 30000 personas**
 
 ```
-
+db.stats.find({
+$or:[ 
+  {comunidad: {$eq: Comunidad de Madrid} },
+  {$and:[
+    {comunidad: {$neq: Comunidad de Madrid} },
+    {poblacion: {$gte: 30000} }
+    ]
+]
+})
 ```
 
 **Pregunta 4 (0.5 puntos) – Añada un campo nuevo con nombre “superpoblado” y su valor debe ser
