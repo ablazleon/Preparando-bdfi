@@ -4,13 +4,13 @@
 
 **Pregunta 1 (1pt) - ¿Para qué sirven los ODMs?. ¿Qué ventajas tiene utilizarlos?**
 
-Un ODM es un object-document mapper, es un middleware que relaciona docuemtnos en una bbdd con los objetos de una aplicación. Para que la aplicación almacene sus objetos en la bbdd se puede optar por realizar queries directamente sobre un driver o emplear un sw específico, en este caso un odm. Se destaca como ventaja que este sw hace de capa intermedia y suele impedir inyecciones de sql. 
+Un ODM es un object-document mapper, un middleware que relaciona documentos en una bbdd con los objetos de una aplicación. Para que la aplicación almacene sus objetos en la bbdd se puede optar por realizar queries directamente sobre un driver o emplear un sw específico, en este caso un odm. Se destaca como ventaja que este sw hace de capa intermedia y suele impedir inyecciones de sql o facilita tratar formatos difíciles como el date.
 
 **Pregunta 2 (1pt) - Teorema de CAP (o de Brewer). Enuncielo y diga qué significan la C, la A y la P**
 
 Dado un sistema distribuido (uno que posee un estado que se encuentra distribuido entre un conjunto de nodos) se definen tres características de él: su C o Consistencia, su A o disponibilidad y su P o tolerancia a fallos que provoquen un particionamiento.
 
-Consistencia: la psoibildiad de que un estado esté actualizado en el sistema.
+Consistencia: la posibildiad de que un estado esté actualizado en el sistema.
 
 Disponibilidad: la posibilidad de que se pueda operar el sistema.
 
@@ -21,8 +21,35 @@ EL teorema de CAP dice que "en un sistema distribuido, con propiedades C, A y P,
 **Pregunta 3 (1pt) - ¿En qué consiste el particionamiento (o Sharding) de una Base de Datos? Enumere
 2 ventajas**
 
+Particionar una bbbdd consiste en fragmentar los datos almacenándolos en varios nodos. Se destacan dos ventajas que puede propiciar esta práctica:
+
+- Mejorar el rendimiento siendo eficiente económicamente: pues al escalar el servicio (por ejemplo cuando el índice de los datos ya no cabe en la ram de la máquina), en vez de adquirir una máquina mejor y más cara (escalado vertical) se puede optar por realizar un shard en un clúster sobre máquinas COTS.
+
+- Mejorar la latencia: al divdir los datos en nodos, se puede plantear acercar cierta ifnoramción al edge de ciertos usuarios para disminuir su latencia.
+
 **Pregunta 4 (1pt) – Data Value Pyramid o pirámide de valor de los datos. Indique qué es y que tiene
 cada uno de los niveles. (Si quiere puede ayudarse dibujando la pirámide en cuestión).**
+
+La pirámida de valro del dato es una representación inspirada asemejanza de la pirámide de las necesidades de Mashlow, que describe ciertas acciones sobre el análisis de datos y como en los niveles ascendientes las acciones aportan más valor.
+
+Actions
+
+Predictions
+
+Reports
+
+Explorations
+
+Records
+
+En la base se enceuntran la creación de pipelines y estructuras para almacenar y dar formato a los datos.
+
+A continaución los análissi y las exploraciones.
+
+Después, los reportes o análsis más generales.
+
+Luego las prediciones y por último las acciones.
+
 
 **Sea una base de datos MongoDB llamada “stats” que contiene un documento con información por
 cada barrio de España. El siguiente JSON es un ejemplo de dichos documentos:**
@@ -59,24 +86,43 @@ cada barrio de España. El siguiente JSON es un ejemplo de dichos documentos:**
 defecto a la base de datos de nombre “test”. Conéctese a la base de datos comentada anteriormente
 y ejecute una query para buscar los barrios con el código postal 10280 o 10290:**
 
+```
+
+```
+
 **Pregunta 2 (0.5 puntos) – Obtenga con un comando de la Mongo Shell los barrios que no tengan
 bibliotecas (estos pueden ser los que su array bibliotecas tenga tamaño 0 o directamente no tengan
 array bibliotecas).**
+
+```
+
+```
 
 **Pregunta 3 (0.5 puntos) – Busque con una única query los barrios que cumplan lo siguiente:** 
 - **o que sean de la Comunidad de Madrid** 
 - **o que no sean de la Comunidad de Madrid pero que tengan más de 30000 personas**
 
+```
+
+```
 
 **Pregunta 4 (0.5 puntos) – Añada un campo nuevo con nombre “superpoblado” y su valor debe ser
 true para los barrios que tengan igual o más a 10000 personas y false para los barrios que tengan
 menos de 10000 personas.**
+
+```
+
+```
 
 **Pregunta 5 (0.5 puntos) – Una aplicación que accede a esta base de datos se ha quejado que va muy
 muy lenta. Con el comando db.setProfilingLevel(1, 300) conseguimos logear queries lentas y vemos
 que hay miles de queries muy lentas que acceden al campo “CP”. ¿Cómo podríamos mejorar la
 performance de la base de datos? Indique el comando con el que lo arreglaría (sabemos que el
 campo “CP” es único, no hay dos documentos con dicho campo igual):**
+
+```
+
+```
 
 **Pregunta 6 (1 punto) – Tenemos la siguiente query del aggregation framework que consta de 4 fases:**
 
@@ -108,6 +154,10 @@ db.zips.aggregate([
 
 ***Explique qué hace cada una de las fases y ponga un ejemplo de documento resultado de cada una
 de las fases.***
+
+```
+
+```
 
 **Pregunta 6 (1 punto dividido en 3 apartados) –
 Una compañía financiera, dispone de un servicio RESTful Web Server para realizar operaciones CRUD
@@ -146,6 +196,9 @@ settings: {electionTimeoutMillis: 1000}
 })"
 
 ```
+
+
+
 
 **C) (0.2 puntos) Suponiendo que la colección “clients” creciese considerablemente, indique
 brevemente cómo se podría mejorar el despliegue para que se mejore la velocidad de acceso a los
