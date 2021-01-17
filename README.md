@@ -1,5 +1,7 @@
 # Preparando-bdfi
 
+# Examen 2019 enero
+
 **Pregunta 1 (1pt) - ¿Para qué sirven los ODMs?. ¿Qué ventajas tiene utilizarlos?**
 
 **Pregunta 2 (1pt) - Teorema de CAP (o de Brewer). Enuncielo y diga qué significan la C, la A y la P**
@@ -128,7 +130,9 @@ members: [ { _id : <member_id>, host : '<member_host>'},
 { _id : <member_id>, host : '<member_host>'},
 { _id : <member_id>, host : '<member_host>'}
 ],
-s
+settings: {electionTimeoutMillis: 1000}
+})"
+
 ```
 
 **C) (0.2 puntos) Suponiendo que la colección “clients” creciese considerablemente, indique
@@ -142,3 +146,11 @@ asignatura, que utiliza PouchDB y CouchDB:**
 accede a la aplicación no tiene datos y hace cambios sobre la aplicación. Explique
 (ayudándose si lo desea de su dibujo del apartado a) cómo funciona cuando no hay conexión
 de red y qué ocurre cuando se vuelve a estar online. (0,5 puntos)**
+
+**Pregutnas extra de mi cosecha**
+
+**(0.5 pto) En qué se basa la seguridad de mongo**
+
+**(0.5 pto) ¿Se puede decir que mongo sea una bbdd durable?**
+
+
