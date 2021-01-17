@@ -4,7 +4,20 @@
 
 **Pregunta 1 (1pt) - ¿Para qué sirven los ODMs?. ¿Qué ventajas tiene utilizarlos?**
 
+Un ODM es un object-document mapper, es un middleware que relaciona docuemtnos en una bbdd con los objetos de una aplicación. Para que la aplicación almacene sus objetos en la bbdd se puede optar por realizar queires directamente sobre un driver o emplear un sw específico, en este caso un odm. Se destaca como ventaja que este sw hace de capa intermedia y suele impedir inyecciones de sql. 
+
 **Pregunta 2 (1pt) - Teorema de CAP (o de Brewer). Enuncielo y diga qué significan la C, la A y la P**
+
+Dado un sistema distribuido (uno que posee un estado que se encuentra distribuido entre un conjunto de nodos) se definen tres características de él: su C o Consistencia, su A o disponibilidad y su P o tolerancia a fallos que provoquen un particionamiento.
+
+Consistencia: la psoibildiad de que un estado esté actualizado en el sistema.
+
+Disponibilidad: la posibilidad de que se pueda operar el sistema.
+
+Tolerancia a particionamiento: la posibilidad de que ocurra un error en la red.
+
+EL teorema de CAP dice que "en un sistema distribuido, con propiedades C, A y P, sólo se pueden asegurar dos". Es decir, si se produce un error en la red y el estado entre los nodos no se puede actualizar, o se decide optar a permitir operar el sistema (A) o a que no se opere, en favor de garantizar un estado consistente (C).
+
 
 **Pregunta 3 (1pt) - ¿En qué consiste el particionamiento (o Sharding) de una Base de Datos? Enumere
 2 ventajas**
