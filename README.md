@@ -42,7 +42,7 @@ Explorations
 
 Records
 
-En la base se enceuntran la creación de pipelines y estructuras para almacenar y dar formato a los datos.
+En la base se encuentran la creación de pipelines y estructuras para almacenar y dar formato a los datos.
 
 A continaución los análissi y las exploraciones.
 
@@ -119,7 +119,7 @@ $or:[
   {comunidad: {$eq: Comunidad de Madrid} },
   {$and:[
     {comunidad: {$neq: Comunidad de Madrid} },
-    {poblacion: {$gte: 30000} }
+    {poblacion: {$gt: 30000} }
     ]
 ]
 })
@@ -130,7 +130,15 @@ true para los barrios que tengan igual o más a 10000 personas y false para los 
 menos de 10000 personas.**
 
 ```
+db.stats.update({
+  { $gte: 10000 },
+  { $set: {superpoblado: "true"} }
+})
 
+db.stats.update({
+  { $lt: 10000 },
+  { $set: {superpoblado: "false"} }
+})
 ```
 
 **Pregunta 5 (0.5 puntos) – Una aplicación que accede a esta base de datos se ha quejado que va muy
@@ -138,6 +146,10 @@ muy lenta. Con el comando db.setProfilingLevel(1, 300) conseguimos logear querie
 que hay miles de queries muy lentas que acceden al campo “CP”. ¿Cómo podríamos mejorar la
 performance de la base de datos? Indique el comando con el que lo arreglaría (sabemos que el
 campo “CP” es único, no hay dos documentos con dicho campo igual):**
+
+Se podría mejorar la performance de la bbdd creando un índice sobre el campo CP, sabiendo que es único.
+
+db.stats.createIndex()
 
 ```
 
@@ -173,6 +185,31 @@ db.zips.aggregate([
 
 ***Explique qué hace cada una de las fases y ponga un ejemplo de documento resultado de cada una
 de las fases.***
+
+La query consta de cuatro fases: dos groups, un sort y un project
+
+en el primer group se agrupan los documentos con la misma comunidad y ciudad y se crea un campo pop suma de las poblaciones en la agrupación
+
+```
+{
+ "_id": ObjectId("571786ca7fdc0dc3e0631317"),
+ “ciudad": “Madrid",
+ “comunidad": “Comunidad de Madrid",
+ “pop": 3000000,
+}
+```
+
+A continuación se ordena de menor a mayor en función de esta suma.
+
+Después, para cada comunidad se realiza otra agrupación sobre el id comundiad, creanod propiedades biggestCity que almecna el idea de la última ciudad, la de mayor población, y de biggestPop, que alamacena su población; y por otro lado las propiedaded de smallestCity y smallestProp
+
+```
+{
+ "_id": ObjectId("571786ca7fdc0dc3e0631317"),
+ “comunidad": “Comunidad de Madrid",
+ “pop": 3000000,
+}
+```
 
 ```
 
