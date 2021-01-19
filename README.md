@@ -264,8 +264,21 @@ settings: {electionTimeoutMillis: 1000}
 
 ```
 
+*En nuestro año no se planteó el despleigue de mongo en replicación con contenedores sino con servicios, de forma que se debe modificar el comando ejemplo para adapatarlo a la práctica.*
 
+```
 
+mongo --host localhost:27001
+
+rs.initiate({
+_id : 'my-mongo-set',
+members: [ 
+{ _id : 0, host : 'localhost:27002', priority: 900},
+{ _id : 1, host : 'localhost:27003'},
+{ _id : 2, host : 'localhost:27004', priority: 0, slaveDelay: 60}
+]
+})
+```
 
 **C) (0.2 puntos) Suponiendo que la colección “clients” creciese considerablemente, indique
 brevemente cómo se podría mejorar el despliegue para que se mejore la velocidad de acceso a los
