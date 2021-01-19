@@ -287,15 +287,36 @@ datos.**
 **Pregunta 7 (1.5 puntos en dos apartados): Sobre la aplicación realizada en la última práctica de la
 asignatura, que utiliza PouchDB y CouchDB:**
 **a) Dibuje y explique la arquitectura. (1 punto)**
+
+La aplcaición de la última práctica se base en la sigueitne arquitectura: existe un nodo cliente y otro servidor. En el servidor se almacenan los datos en un servidor couchdb, mientras que en el nodo cliente un servidor de puch db(impelmentación en js de couch db hace de bbdd).
+
+pouchdb <-> couchdb
+
 **b) Cómo funciona la aplicación cuando no hay conexión de red, es decir cuando el terminal que
 accede a la aplicación no tiene datos y hace cambios sobre la aplicación. Explique
 (ayudándose si lo desea de su dibujo del apartado a) cómo funciona cuando no hay conexión
 de red y qué ocurre cuando se vuelve a estar online. (0,5 puntos)**
 
+Cuando no existe conexión de red y se realizan cambios desde la aplciación, se escribe sobre la base de datos del cleinte (pouch db), permitiendo la operación del servicio, auqnue se muestra en la aplcaición que no existe conexión. Una vez se reestablece la conexión, los cambios se replcain en el couch servidor produciéndose archivos de conflicto para gestionarse.
+
 **Pregutnas extra de mi cosecha**
 
 **(0.5 pto) En qué se basa la seguridad de mongo**
 
+La seguridad de mongo se basa en tres estrategias: dos de defnesa, tanto autentaición como autorización y una de salvaguarda el cifrado tanto en reposo como en transporte.
+
+
+
 **(0.5 pto) ¿Se puede decir que mongo sea una bbdd durable?**
 
+Sí, en mongo se puede configurar el apraámetro writeCOnvcern para hacer que todos los datos se escriban siempre a discos reduciendo la performance.
+
 **(0.5 pto) En qué consiste el paradigma PACELC? Cuál es su diferencia frente a CAP?**
+
+EL paradigma PACELC, al igual que que el model CAP es un modelo que define ciertas propiedades en un sistema distribuido y propone una explaicción a su fucnioanmeinto. 
+
+Este teorema dice:
+
+Si P (eror pro particionamienot de la red) -> o COnsistencia ( manteniento de un estado actualizado) o disponibilidad (mantener la oepración del servcio)
+
+E -> L (o 
