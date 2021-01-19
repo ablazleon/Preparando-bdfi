@@ -319,4 +319,4 @@ Este teorema dice:
 
 Si P (eror pro particionamienot de la red) -> o COnsistencia ( manteniento de un estado actualizado) o disponibilidad (mantener la oepración del servcio)
 
-E -> L (o 
+E (else o en caso contrario) -> L (o latencia en el acceso) o (consistencai) 
