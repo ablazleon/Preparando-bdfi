@@ -1,5 +1,14 @@
 # Preparando-bdfi
 
+Índice
+
+# Examen 2019 enero
+
+# Examen 2018 enero
+
+# Mi cosecha
+------------
+
 # Examen 2019 enero
 
 **Pregunta 1 (1pt) - ¿Para qué sirven los ODMs?. ¿Qué ventajas tiene utilizarlos?**
@@ -320,3 +329,53 @@ Este teorema dice:
 Si P (eror pro particionamienot de la red) -> o COnsistencia ( manteniento de un estado actualizado) o disponibilidad (mantener la oepración del servcio)
 
 E (else o en caso contrario) -> L (o baja latencia en el acceso) o (consistencai, por ello lata latencia) 
+
+-----------
+
+# Examen 2018 enero
+
+**Pregunta 1 (1pt) – ¿Qué es un índice de una base de datos? ¿Cuándo necesitaré un índice en una base de datos? Ponga un ejemplo.**
+
+**Pregunta 2 (1pt) - Modelo ACID. Enúncialo y descríbelo especificando que significa cada letra A, C, I y D.**
+
+**Pregunta 3 (1pt) - ¿Cuantos tipos de BBDD NoSQL hay? Pon un ejemplo de tecnología de cada una. Sitúa los diferentes tipos sobre un gráfico en el que las Xs son “Complejidad de los datos” y las Ys “Tamaño de los datos”**
+
+**Pregunta 4 (1pt) - Explique las ventajas que ofrece el uso de un servicio REST como interfaz para proporcionar acceso a los datos almacenados en una Base de Datos**
+
+```
+{
+ _id: 12345,
+ nombre: “Enrique Barra",
+ mote: “Enri”,
+ sexo: “varón”,
+ edad: 33,
+ color_pelo: “negro”,
+ altura: 183,
+ calle: “Sor Angela de la Cruz",
+ numero: 122,
+ ciudad: “Madrid”,
+ aficiones: [“tenis”, “baloncesto”, “padel”],
+ formas_contacto: [{ type: “movil”, content: 659782565}, {type: “tlf”, content: 91253569},
+{type: “email”, content: “ebarra@dit.upm.es”}]
+}
+```
+
+Sobre esta base de datos se pide lo siguiente:
+**Pregunta 5 (0,5pt) – Escriba una query en MongoDB para obtener el número de personas que tienen como afición el tenis:**
+
+**Pregunta 6 (0,5pts) – Escriba una query en MongoDB para obtener el número de personas que miden más de 180cm y tienen igual o menos de 35 años:**
+
+**Pregunta 7(0,5pts) - Escriba la query de MongoDB para obtener las 5 personas más altas:**
+
+**Pregunta 8 (0,5pts)– Queremos cambiar el registro que nos ha devuelto el findOne porque Enrique Barra nos ha notificado de un cambio de dirección. Ahora vive en “Calle Abeto, 15” en “Alcobendas”. Escriba la instrucción en MongoDB para editar el registro introducir estos datos.**
+
+
+**Pregunta 10 (1pt)- En nuestro sistema tenemos una llamada perdida del número 659232323. Escriba una query en MongoDB para buscar a la/s personas que tengan ese número de móvil.**
+
+**Pregunta 11 (1pt)- Escriba una query que devuelva un documento con un campo “num” con cuantas personas hay y un campo “altura_media” con la altura media de las personas que vivan en la calle “Sor Angela de la Cruz” en “Madrid”**
+
+**Pregunta 12 (1pt) - Sobre la práctica ReplicaSet propuesta en la asignatura:
+a) Haga un diagrama conceptual del escenario desarrollado.
+b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y ficheros a modificar en su caso) para modificar los datos almacenados en la Base de Datos, prescindiendo por completo de los datos actuales y cargando unos nuevos datos disponibles en un fichero llamado zips_nuevo.json
+
+# Mi cosecha
