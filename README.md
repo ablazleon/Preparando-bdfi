@@ -15,6 +15,20 @@
 
 Un ODM es un object-document mapper, un middleware que relaciona documentos en una bbdd con los objetos de una aplicación. Para que la aplicación almacene sus objetos en la bbdd se puede optar por realizar queries directamente sobre un driver o emplear un sw específico, en este caso un odm. Se destaca como ventaja que este sw hace de capa intermedia y suele impedir inyecciones de sql o facilita tratar formatos difíciles como el date.
 
+=> improvement:
+
+- muchas cosas se hacen atomáticamenete: conectar a la bbdd, convertir tipos
+- la app queda más limpia, pues fomenta el patrón mvc, es deicr escribir un controlador, que es el que utiliza el odm y ataca a la bbdd.
+- el código del modelo queda único.
+- cachés que agilice las consultas más típicas.
+- sanitiza en genrral el código, evitando las nyecciones
+- genera auotmáticamente código
+
+- compeljso
+- curva de aprendizaje
+- buena arquitecutra
+- puede santurar la memeoria de lso objetos si se solcitna muchos datos.
+
 **Pregunta 2 (1pt) - Teorema de CAP (o de Brewer). Enuncielo y diga qué significan la C, la A y la P**
 
 Dado un sistema distribuido (uno que posee un estado que se encuentra distribuido entre un conjunto de nodos) se definen tres características de él: su C o Consistencia, su A o disponibilidad y su P o tolerancia a fallos que provoquen un particionamiento.
