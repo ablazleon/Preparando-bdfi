@@ -312,9 +312,15 @@ Cuando no existe conexión de red y se realizan cambios desde la aplciación, se
 
 **(0.5 pto) En qué se basa la seguridad de mongo**
 
-La seguridad de mongo se basa en tres estrategias: dos de defnesa, tanto autentaición como autorización y una de salvaguarda el cifrado tanto en reposo como en transporte.
+La seguridad de mongo se basa en tres estrategias: dos de defnesa, tanto autentaición como autorización y una de salvaguarda, el cifrado tanto en reposo como en transporte.
 
+EN cuanto a la autenticación, es decir, el mecanismo para porbar la identidad, se contemplan tres estrategiias: usar un contraseña (SCRAM_SHA-1 o SCRAM-SHA-256), un certificado x.509 o un servidor externo (LDAP o Kerberos).
 
+EN cuanto a la autorizció9n, en mongo no se empela pro defecto; es encesario usar el comoadno --auth. Una vez habilitado el control de acceso los usarios deben autenticarse. Para ello es convenitente definir roles, para otorgar a ciertos usuarios privilegios para realizar acciones sobre ciertos recursos.
+
+Por otro lado, el cifrado de la iofnoramción en transporte se realiza mediante cigrado TLS/SSL y certigfcados; o autofirmados, aunque permite ataques man in the middle, o certificados firamdos por una autoridad de certificaciñib. Se aplcaic este certificado en el fichero de configruación.
+
+Por último, se contempaln dos estrategias para el cifrado de contenidos: o usar la utilidad de mongo enterprise para cifrar el disco o cifrando direcxtamtne el voluemn. Se pude confirar también el cifrado de un campo espec´fifico. TMabién se puede cifrar directamten en el odm, aunque esos camos no pdorán ser accediso mediante la shell.
 
 **(0.5 pto) ¿Se puede decir que mongo sea una bbdd durable?**
 
