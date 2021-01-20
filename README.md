@@ -1,5 +1,14 @@
 # Preparando-bdfi
 
+# Examen 2019 enero
+
+# 2018
+
+# Tests
+
+# Mi cosecha
+
+
 **Pregunta 1 (1pt) - ¿Para qué sirven los ODMs?. ¿Qué ventajas tiene utilizarlos?**
 
 **Pregunta 2 (1pt) - Teorema de CAP (o de Brewer). Enuncielo y diga qué significan la C, la A y la P**
@@ -142,3 +151,309 @@ asignatura, que utiliza PouchDB y CouchDB:**
 accede a la aplicación no tiene datos y hace cambios sobre la aplicación. Explique
 (ayudándose si lo desea de su dibujo del apartado a) cómo funciona cuando no hay conexión
 de red y qué ocurre cuando se vuelve a estar online. (0,5 puntos)**
+
+# Examen 2018 enero
+
+**Pregunta 1 (1pt) – ¿Qué es un índice de una base de datos? ¿Cuándo necesitaré un índice en una base de datos? Ponga un ejemplo.**
+
+**Pregunta 2 (1pt) - Modelo ACID. Enúncialo y descríbelo especificando que significa cada letra A, C, I y D.**
+
+**Pregunta 3 (1pt) - ¿Cuantos tipos de BBDD NoSQL hay? Pon un ejemplo de tecnología de cada una. Sitúa los diferentes tipos sobre un gráfico en el que las Xs son “Complejidad de los datos” y las Ys “Tamaño de los datos”**
+
+**Pregunta 4 (1pt) - Explique las ventajas que ofrece el uso de un servicio REST como interfaz para proporcionar acceso a los datos almacenados en una Base de Datos**
+
+```
+{
+ _id: 12345,
+ nombre: “Enrique Barra",
+ mote: “Enri”,
+ sexo: “varón”,
+ edad: 33,
+ color_pelo: “negro”,
+ altura: 183,
+ calle: “Sor Angela de la Cruz",
+ numero: 122,
+ ciudad: “Madrid”,
+ aficiones: [“tenis”, “baloncesto”, “padel”],
+ formas_contacto: [{ type: “movil”, content: 659782565}, {type: “tlf”, content: 91253569},
+{type: “email”, content: “ebarra@dit.upm.es”}]
+}
+```
+
+Sobre esta base de datos se pide lo siguiente:
+**Pregunta 5 (0,5pt) – Escriba una query en MongoDB para obtener el número de personas que tienen como afición el tenis:**
+
+**Pregunta 6 (0,5pts) – Escriba una query en MongoDB para obtener el número de personas que miden más de 180cm y tienen igual o menos de 35 años:**
+
+**Pregunta 7(0,5pts) - Escriba la query de MongoDB para obtener las 5 personas más altas:**
+
+**Pregunta 8 (0,5pts)– Queremos cambiar el registro que nos ha devuelto el findOne porque Enrique Barra nos ha notificado de un cambio de dirección. Ahora vive en “Calle Abeto, 15” en “Alcobendas”. Escriba la instrucción en MongoDB para editar el registro introducir estos datos.**
+
+
+**Pregunta 10 (1pt)- En nuestro sistema tenemos una llamada perdida del número 659232323. Escriba una query en MongoDB para buscar a la/s personas que tengan ese número de móvil.**
+
+**Pregunta 11 (1pt)- Escriba una query que devuelva un documento con un campo “num” con cuantas personas hay y un campo “altura_media” con la altura media de las personas que vivan en la calle “Sor Angela de la Cruz” en “Madrid”**
+
+**Pregunta 12 (1pt) - Sobre la práctica ReplicaSet propuesta en la asignatura:
+a) Haga un diagrama conceptual del escenario desarrollado.
+b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y ficheros a modificar en su caso) para modificar los datos almacenados en la Base de Datos, prescindiendo por completo de los datos actuales y cargando unos nuevos datos disponibles en un fichero llamado zips_nuevo.json
+
+# Tests
+
+¿Qué tipos de bases de datos NoSQL hay?
+Seleccione una:
+a.Clave-valor, familia de filas, arrays y grafos.
+b.Clave-valor, familia de columnas, documentos y grafos.
+c.Clave-valor, familia de filas, arrays y matriciales.
+d.Clave-valor, familia de filas, documentos y grafos.
+
+¿Qué propiedades propone el modelo ACID que debe cumplir una transacción de una base de datos?
+Seleccione una:
+a. Atomicidad, Completitud, Integridad y Durabilidad
+b. Atomicidad, Consistencia, Aislamiento y Durabilidad
+c. Atomicidad, Consistencia, Aislamiento y Disponibilidad
+d. Atomicidad, Completitud, Integridad y Disponibilidad
+
+¿Qué tipo de bases de datos NoSQL maneja mayor complejidad de datos?
+Seleccione una:
+a. Familia de columnas
+b. Grafos
+c. Documentos
+d. Clave-valor
+
+¿Qué sistema de consultas (queries) emplean las bases de datos NoSQL?
+Seleccione una:
+a. Como su nombre indica son contrarias a SQL y emplean un sistema de consultas alternativo llamado JSON
+b. Emplean NoSQL como sistema de consultas alternativo a SQL
+c. Tienen un sistema de consultas propio en vez de usar un lenguaje de consultas estándar
+
+En la pirámide de valor de los datos, ¿Qué encontramos en el nivel más ALTO?
+Seleccione una:
+a. Acciones
+b. Predicciones
+c. Visualización de datos
+d. Análisis de datos
+e. Captura y muestra de los datos en crudo
+
+El teorema de CAP recibe críticas por ser considerado simplista. ¿Cómo se llama uno de los teoremas alternativos que está más extendido?
+Seleccione una:
+a. Teorema CAP-NoSQL
+b. Teorema PACELC
+c. Teorema CELIA
+d. Teorema CAP II
+
+¿Cuál de las propiedades del modelo ACID indica que se ejecuta todo o nada?
+Seleccione una:
+a. Consistencia
+b. Integridad
+c. Atomicidad
+d. Aislamiento
+
+Indique si es verdadera o falsa la siguiente afirmación. "BASE es una alternativa flexible a ACID para aquellas bases de datos que no requieren una adherencia estricta a las transacciones y tienen modelos de datos más flexibles"
+Seleccione una:
+a. Falso
+b. Verdadero
+
+¿Qué significan las letras C, A y P, del teorema de CAP?
+Seleccione una:
+a. Completeness, Availability y Persistence
+b. Completeness, Autenticity y Persistence
+c. Consistency, Availability y Partition tolerance
+d. Consistency, Autenticity y Persistence
+e. Consistency, Autenticity y Partition
+
+¿Cuáles son las 5 dimensiones o 5 Vs del Big Data?
+Seleccione una:
+a. Volumen, Ventaja, Vigilancia, Veracidad y Valor.
+b. Volumen, Ventaja, Velocidad, Veracidad y Valor.
+c. Volumen, Variedad, Velocidad, Veracidad y Valor.
+d. Volumen, Ventaja, Vigilancia, Visibilidad y Valor.
+
+-----------
+
+¿Cuál de las siguientes queries crea un índice sobre el campo autor de la colección posts y asegura que es único?
+Seleccione una:
+a. db.posts.createIndex({"author": {"$unique":1} });
+b. db.posts.createIndex({"author": unique });
+c. db.posts.createIndexUnique({"author":1 });
+d. db.posts.createIndex({"author":1 }, {"unique": true});
+
+
+Tenemos una colección estudiantes con un campo array con la nacionalidad, así: {_id: 5, nacionalidad: [“español”, “ingles”], nombre: “pepe”} ¿Cuál de los siguientes comandos encuentra todos los estudiantes que tengan nacionalidad “aleman”:
+Seleccione una:
+a. db.students.find( { “nacionalidad.*”: “aleman” })
+b. db.students.find( { “nacionalidad.0”: “aleman” })
+c. n/a
+d. db.students.findInArray( { nacionalidad: “aleman” })
+e. db.students.find( { nacionalidad: “aleman” })
+
+Tengo una colección students ¿Con cuál de las siguientes queries añadiría un campo con clave “mayor” y valor el booleano true a todos los estudiantes que tengan igual o más de 18 años?
+Seleccione una:
+a. db.students.update( { { age: {$gt: 18}}}, { $set: { mayor: “true” } }, { multi: true })
+b. n/a
+c. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: “true” } })
+d. db.students.update( { { gte: {$age: 18}}}, { $set: { mayor: “true” } })
+e. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: true } }, { multi: true })
+
+¿Qué devuelve el siguiente comando? db.students.find( { direccion.numero: 79 )
+Seleccione una:
+a. Todos los estudiantes que tengan un campo llamado “direccion.numero” con valor 79
+b. n/a
+c. Dará un error de sintaxis al ejecutarse porque al usar la notación punto en la clave es obligatorio ponerla entre comillas
+d. Todos los estudiantes que tengan un campo numero con valor 79
+e. Todos los estudiantes que tengan un campo numero con valor 79, estando este número dentro de un objeto con clave “direccion” así: {direccion: {numero: 79}}
+
+Tengo una colección students ¿Con cuál de las siguientes queries añadiría un campo con clave “pagado” y valor “si” a todos los estudiantes?
+Seleccione una:
+a. db.students.update( { * }, { $set: { pagado: “si” } }, { all: true })
+b. db.students.update( { }, { $set: { pagado: “si” } }, { multi: true })
+c. db.students.update( { * }, { $set: { pagado: “si” } }, { multi: true })
+d. db.students.update( { * }, { $set: { pagado: “si” } })
+e. n/a
+
+Sea una base de datos MongoDB, en la que la respuesta a la query db.products.findOne() devuelve lo siguiente:
+{ _id: "23",  price: 55, name: "Kivik",  status: "available", pieces: [12, 84, 45] }
+Que hace la siguiente query MongoDB:
+db.products.remove({pieces: {$in: [12, 84]}})
+Seleccione una:
+a. Borra los productos que tengan las dos piezas, 12 y 84
+b. Da un error de ejecución porque no ha puesto una condición de búsqueda
+c. Borra los productos que tengan una de las piezas 12 u 84
+d. Borra las piezas 12 y 84 de todos los productos
+
+¿Cuál de los siguientes documentos sería devuelto por la siguiente query?
+db.users.find( { friends : { $all : [ "Joe" , "Bob" ] }, favorites : { $in : [ "running" , "pickles" ] } }
+Seleccione una:
+a. { name : "Cliff" , friends : [ "Pete" , "Joe" , "Tom" , "Bob" ] , favorites : [ "pickles", "cycling" ] }
+b.{ name : "Harry" , friends : [ "Joe" , "Bob" ] , favorites : [ "hot dogs", "swimming" ] }
+c.{ name : "William" , friends : [ "Bob" , "Fred" ] , favorites : [ "hamburgers", "running" ] }
+d.{ name : "Stephen" , friends : [ "Joe" , "Pete" ] , favorites : [ "pickles", "swimming" ] }
+
+¿Qué devuelve el siguiente comando? db.students.find( { ‘records.0’: ‘passed’ } )
+Seleccione una:
+a.Todos los estudiantes cuyo primer elemento del array “records” contiene el string “passed”
+b.n/a
+c.Todos los estudiantes cuyo array “records” contiene el string “passed”
+d.Todos los estudiantes cuyo primer elemento del array “passed” contiene el string “records”
+e.Dará un error de sintaxis al ejecutarse porque la clave no se puede escribir con comillas
+
+En una colección llamada posts que contiene 1000 documentos que hace el siguiente comando?
+  db.posts.find().skip(5).limit(5)
+Seleccione una:
+a.Se salta los primeros 5 documentos y devuelve el sexto documento que encuentra en un array repetido 5 veces
+b.Skip y limit se anulan uno a otro y por lo tando devuelve los primeros 5 documentos
+c.Se salta los primeros 5 documentos y devuelve del 6 al 11
+d.Limita los 5 primeros documentos (gracias a la sentencia limit(5)) y se salta los 5 siguiente, devolviendo del 11 al 15
+
+Sea una base de datos MongoDB, en la que la respuesta a la query db.products.findOne() devuelve lo siguiente:
+{ _id: "23",  price: 55, name: "Kivik",  status: "available", pieces: [12, 84, 45] }
+Que hacen las siguientes dos queries:
+db.products.update({name: "Kivik"}, {$pull: {pieces: 12}}, {multi: true} )
+db.products.update({{_id: "23"}, {$push: {pieces: 122}}, {multi: true} })
+Seleccione una:
+a.Se sustituye en todos los elementos de nombre "Kivik" la pieza 12 por la 122
+b.Se sustituye en el elemento que había devuelto el findOne() la pieza 12 por la 122
+c.Se borra de todos los elementos de nombre "Kivik" la pieza número 12 y se inserta en el elemento que había devuelto el findOne() la pieza con id 122
+d.Se sustituye la pieza 12 por la 122 en todos los elementos de la colección
+
+¿Qué es un indice multiclave en una colección en MongoDB y qué hace falta para crearlo?
+Seleccione una:
+a.n/a
+b.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos solo hay que indicar los campos que se desee así: db.records.createIndex( { name: 1, age: -1 } )
+c.Es un índice sobre un campo que contiene como valor un array, para crearlo usamos la notación punto y la posición del array sobre la que se quiere crear el índice, empezando en 0 la primera posición
+d.Es un índice sobre un campo que contiene como valor un array, no hace falta hacer nada especial para crearlo, si el campo es array el índice creado sobre ese campo es multiclave
+e.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos no hace falta hacer nada especial, si doy dos órdenes createIndex, MongoDB las combina y las optimiza y crea un índice multiclave
+
+-------------
+
+¿Cúal de las siguientes afirmaciones es correcta en cuanto a replicación de líder individual?
+Seleccione una:
+a. n/a
+b. Los seguidores solo pueden usarse para procesar peticiones de escritura
+c. Solo el líder acepta peticiones de escritura
+d. La mayor desventaja del líder individual es la gestión de conflictos
+e. Solo el líder acepta peticiones de lectura
+
+El particionamiento con MongoDB es:
+Seleccione una:
+a. n/a
+b. No se puede hacer particionamiento con MongoDB
+c. de líder múltiple asíncrono
+d. Algorítmica
+e. Dinámica pero permite definir un set inicial de shards
+
+Si he configurado un replicastet en un conjunto de servidores de MongoDB y luego añado otro usando el siguiente comando en la shell de Mongo:
+rs.add({ host: "mongodb.net:27017", slaveDelay: 5})
+¿Cuál de las siguientes afirmaciones es correcta ?
+Seleccione una:
+a. n/a
+b. EL nuevo servidor agregado replicará los datos pero con un retardo de 5 segundos.
+c. El servido se agrega con una prioridad de 5.
+d. El nuevo servidor forzará la lección de un nuevo primario después de 5 segundos.
+e. El servidor pasará a formar parte del conjunto de réplicas después de 5 segundos.
+
+Si he configurado un replicaset en un conjunto de servidores de MongoDB y luego se quiere añadir otro servidor como Arbitro, ¿Cuál de los siguientes comandos es válido para realizar ese procedimiento?:
+Seleccione una:
+a. rs.add({ host: "mongodb.net:27017", arbiterOnly: 5})
+b. rs.add({ host: "mongodb.net:27017", priority: 5})
+c. rs.add({ host: "mongodb2.example.net:27017",hidden:true})
+d. rs.addArb("mongodb2.example.net:27017")
+e. n/a
+
+¿Cúal de las siguientes afirmaciones sobre Particionamiento es correcta?
+Seleccione una:
+a. No se puede aplicar replicación a datos particionados
+b. Todas las escrituras van al nodo primario.
+c. En la partición algorítmica, se usa un servicio de localización para ubicar los datos
+d. Cumple el requisito de aumento del tamaño de los datos (escalado horizontal).
+e. n/a
+
+¿El siguiente código permite establecer una conexión a una base de datos llamada test en MongoDB :
+var mongoose = require('mongoose'); mongoose.connect('mongodb://localhost/test');
+Si esa base de datos no ha sido creada previamente , ¿Cuál de las siguientes afirmaciones sería correcta?
+Seleccione una:
+
+a. La aplicación devuelve un error de sintaxis.
+b. Al momento de establecer la conexión se crea esa base de datos, si esta no existe previamente.
+c. Se muestra un error en el terminal indicando que la base de datos no existe.
+d. La aplicación devuelve un mensaje de error de "Connection refused"
+e. n/a
+
+Para crear el esquema llamado 'UserSchema' con Moongosoe, con los campos nombre, apellido y edad, debemos ejecutar:
+Seleccione una:
+a. const UserSchema = new mongoose.Schema([ nombre, apellido, edad] )
+b. n/a
+c. const UserSchema = new mongoose.Schema({ nombre: String, apellido: String, edad: Number})
+d. const UserSchema = new mongoose.InsertIntoSchemas({ nombre: String, apellido: String, edad: Number})
+e. const UserSchema = new User({ nombre: String, apellido: String, edad: Number})
+
+Tenemos un modelo de usuarios llamado “User" con atributos “id", “nombre" y “edad". Nuestra aplicación usa Mongoose como ODM para gestionar los datos. Si quiero borrar todos los usuarios cuyo nombre es igual a "carlos" tengo que escribir?:
+Seleccione una:
+a. await User.deleteOne({where: {nombre: "Carlos"}});
+b. n/a
+c. await User.deleteMany({if: {nombre: "Carlos"}});
+d. await User.deleteMany({nombre: "Carlos"});
+e. await User.deleteOne({nombre: "Carlos"});
+
+La replicación con MongoDB es:
+Seleccione una:
+a. n/a
+b. De líder individual síncrona
+c. de líder múltiple
+d. No se puede hacer replicación con MongoDB
+e. De líder individual asíncrona
+
+Tenemos un modelo de usuarios llamado “User" con atributos “id", “nombre" y “edad". Nuestra aplicación usa Mongoose como ODM para gestionar los datos. Si quiero buscar todos los usuarios cuya edad es 15 ¿Que tengo que escribir?
+Seleccione una:
+a. n/a
+b. await User.save({ edad: 15 }
+c. await User.findOne({ edad: 15 }
+d. await User.deleteMany({ edad: 15 }
+e. await User.find({ edad: 15 })
+
+-----------
+
+# Mi cosecha
+
+**¿Cuál es la diferencia entre una solución de sistema gestor de base de datos NoSQL y una SQL? ¿Cómo una solución u otra puede ser más aconsejada para distitnos casos de uso?**
+
