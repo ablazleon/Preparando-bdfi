@@ -402,72 +402,72 @@ b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y fi
 
 ¿Qué tipos de bases de datos NoSQL hay?
 Seleccione una:
-a.Clave-valor, familia de filas, arrays y grafos.
-b.Clave-valor, familia de columnas, documentos y grafos.
-c.Clave-valor, familia de filas, arrays y matriciales.
-d.Clave-valor, familia de filas, documentos y grafos.
+a.Clave-valor, familia de filas, arrays y grafos. n arrays
+b.Clave-valor, familia de columnas, documentos y grafos. y
+c.Clave-valor, familia de filas, arrays y matriciales. n matricials
+d.Clave-valor, familia de filas, documentos y grafos. n familia de filas
 
 ¿Qué propiedades propone el modelo ACID que debe cumplir una transacción de una base de datos?
 Seleccione una:
-a. Atomicidad, Completitud, Integridad y Durabilidad
-b. Atomicidad, Consistencia, Aislamiento y Durabilidad
-c. Atomicidad, Consistencia, Aislamiento y Disponibilidad
-d. Atomicidad, Completitud, Integridad y Disponibilidad
+a. Atomicidad, Completitud, Integridad y Durabilidad n compleitud
+b. Atomicidad, Consistencia, Aislamiento y Durabilidad y
+c. Atomicidad, Consistencia, Aislamiento y Disponibilidad n disponibilidad
+d. Atomicidad, Completitud, Integridad y Disponibilidad n completitud
 
 ¿Qué tipo de bases de datos NoSQL maneja mayor complejidad de datos?
 Seleccione una:
 a. Familia de columnas
-b. Grafos
+b. Grafos y
 c. Documentos
 d. Clave-valor
 
 ¿Qué sistema de consultas (queries) emplean las bases de datos NoSQL?
 Seleccione una:
-a. Como su nombre indica son contrarias a SQL y emplean un sistema de consultas alternativo llamado JSON
-b. Emplean NoSQL como sistema de consultas alternativo a SQL
-c. Tienen un sistema de consultas propio en vez de usar un lenguaje de consultas estándar
+a. Como su nombre indica son contrarias a SQL y emplean un sistema de consultas alternativo llamado JSON n
+b. Emplean NoSQL como sistema de consultas alternativo a SQL n
+c. Tienen un sistema de consultas propio en vez de usar un lenguaje de consultas estándar y
 
 En la pirámide de valor de los datos, ¿Qué encontramos en el nivel más ALTO?
 Seleccione una:
-a. Acciones
-b. Predicciones
-c. Visualización de datos
-d. Análisis de datos
-e. Captura y muestra de los datos en crudo
+a. Acciones y
+b. Predicciones n
+c. Visualización de datos n
+d. Análisis de datos n
+e. Captura y muestra de los datos en crudo n
 
 El teorema de CAP recibe críticas por ser considerado simplista. ¿Cómo se llama uno de los teoremas alternativos que está más extendido?
 Seleccione una:
-a. Teorema CAP-NoSQL
-b. Teorema PACELC
-c. Teorema CELIA
-d. Teorema CAP II
+a. Teorema CAP-NoSQL n
+b. Teorema PACELC y
+c. Teorema CELIA n
+d. Teorema CAP II n
 
 ¿Cuál de las propiedades del modelo ACID indica que se ejecuta todo o nada?
 Seleccione una:
-a. Consistencia
-b. Integridad
-c. Atomicidad
-d. Aislamiento
+a. Consistencia n
+b. Integridad n
+c. Atomicidad y
+d. Aislamiento n
 
 Indique si es verdadera o falsa la siguiente afirmación. "BASE es una alternativa flexible a ACID para aquellas bases de datos que no requieren una adherencia estricta a las transacciones y tienen modelos de datos más flexibles"
 Seleccione una:
 a. Falso
-b. Verdadero
+b. Verdadero y 
 
 ¿Qué significan las letras C, A y P, del teorema de CAP?
 Seleccione una:
-a. Completeness, Availability y Persistence
-b. Completeness, Autenticity y Persistence
-c. Consistency, Availability y Partition tolerance
-d. Consistency, Autenticity y Persistence
-e. Consistency, Autenticity y Partition
+a. Completeness, Availability y Persistence n comple
+b. Completeness, Autenticity y Persistence no comp
+c. Consistency, Availability y Partition tolerance y
+d. Consistency, Autenticity y Persistence n pers
+e. Consistency, Autenticity y Partition no auth
 
 ¿Cuáles son las 5 dimensiones o 5 Vs del Big Data?
 Seleccione una:
-a. Volumen, Ventaja, Vigilancia, Veracidad y Valor.
-b. Volumen, Ventaja, Velocidad, Veracidad y Valor.
-c. Volumen, Variedad, Velocidad, Veracidad y Valor.
-d. Volumen, Ventaja, Vigilancia, Visibilidad y Valor.
+a. Volumen, Ventaja, Vigilancia, Veracidad y Valor. n
+b. Volumen, Ventaja, Velocidad, Veracidad y Valor. n
+c. Volumen, Variedad, Velocidad, Veracidad y Valor.y
+d. Volumen, Ventaja, Vigilancia, Visibilidad y Valor. n
 
 -----------
 
