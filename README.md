@@ -378,4 +378,79 @@ Sobre esta base de datos se pide lo siguiente:
 a) Haga un diagrama conceptual del escenario desarrollado.
 b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y ficheros a modificar en su caso) para modificar los datos almacenados en la Base de Datos, prescindiendo por completo de los datos actuales y cargando unos nuevos datos disponibles en un fichero llamado zips_nuevo.json
 
+# Tests
+
+¿Qué tipos de bases de datos NoSQL hay?
+Seleccione una:
+a.Clave-valor, familia de filas, arrays y grafos.
+b.Clave-valor, familia de columnas, documentos y grafos.
+c.Clave-valor, familia de filas, arrays y matriciales.
+d.Clave-valor, familia de filas, documentos y grafos.
+
+¿Qué propiedades propone el modelo ACID que debe cumplir una transacción de una base de datos?
+Seleccione una:
+a. Atomicidad, Completitud, Integridad y Durabilidad
+b. Atomicidad, Consistencia, Aislamiento y Durabilidad
+c. Atomicidad, Consistencia, Aislamiento y Disponibilidad
+d. Atomicidad, Completitud, Integridad y Disponibilidad
+
+¿Qué tipo de bases de datos NoSQL maneja mayor complejidad de datos?
+Seleccione una:
+a. Familia de columnas
+b. Grafos
+c. Documentos
+d. Clave-valor
+
+¿Qué sistema de consultas (queries) emplean las bases de datos NoSQL?
+Seleccione una:
+a. Como su nombre indica son contrarias a SQL y emplean un sistema de consultas alternativo llamado JSON
+b. Emplean NoSQL como sistema de consultas alternativo a SQL
+c. Tienen un sistema de consultas propio en vez de usar un lenguaje de consultas estándar
+
+En la pirámide de valor de los datos, ¿Qué encontramos en el nivel más ALTO?
+Seleccione una:
+a. Acciones
+b. Predicciones
+c. Visualización de datos
+d. Análisis de datos
+e. Captura y muestra de los datos en crudo
+
+El teorema de CAP recibe críticas por ser considerado simplista. ¿Cómo se llama uno de los teoremas alternativos que está más extendido?
+Seleccione una:
+a. Teorema CAP-NoSQL
+b. Teorema PACELC
+c. Teorema CELIA
+d. Teorema CAP II
+
+¿Cuál de las propiedades del modelo ACID indica que se ejecuta todo o nada?
+Seleccione una:
+a. Consistencia
+b. Integridad
+c. Atomicidad
+d. Aislamiento
+
+Indique si es verdadera o falsa la siguiente afirmación. "BASE es una alternativa flexible a ACID para aquellas bases de datos que no requieren una adherencia estricta a las transacciones y tienen modelos de datos más flexibles"
+Seleccione una:
+a. Falso
+b. Verdadero
+
+¿Qué significan las letras C, A y P, del teorema de CAP?
+Seleccione una:
+a. Completeness, Availability y Persistence
+b. Completeness, Autenticity y Persistence
+c. Consistency, Availability y Partition tolerance
+d. Consistency, Autenticity y Persistence
+e. Consistency, Autenticity y Partition
+
+¿Cuáles son las 5 dimensiones o 5 Vs del Big Data?
+Seleccione una:
+a. Volumen, Ventaja, Vigilancia, Veracidad y Valor.
+b. Volumen, Ventaja, Velocidad, Veracidad y Valor.
+c. Volumen, Variedad, Velocidad, Veracidad y Valor.
+d. Volumen, Ventaja, Vigilancia, Visibilidad y Valor.
+
 # Mi cosecha
+
+**¿Cuál es la diferencia entre una solución de sistema gestor de base de datos NoSQL y una SQL? ¿Cómo una solución u otra puede ser más aconsejada para distitnos casos de uso?**
+
+**
