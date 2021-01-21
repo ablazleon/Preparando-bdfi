@@ -473,42 +473,42 @@ d. Volumen, Ventaja, Vigilancia, Visibilidad y Valor. n
 
 ¿Cuál de las siguientes queries crea un índice sobre el campo autor de la colección posts y asegura que es único?
 Seleccione una:
-a. db.posts.createIndex({"author": {"$unique":1} });
-b. db.posts.createIndex({"author": unique });
-c. db.posts.createIndexUnique({"author":1 });
-d. db.posts.createIndex({"author":1 }, {"unique": true});
+a. db.posts.createIndex({"author": {"$unique":1} }); n 
+b. db.posts.createIndex({"author": unique }); n
+c. db.posts.createIndexUnique({"author":1 }); n
+d. db.posts.createIndex({"author":1 }, {"unique": true}); y
 
 
 Tenemos una colección estudiantes con un campo array con la nacionalidad, así: {_id: 5, nacionalidad: [“español”, “ingles”], nombre: “pepe”} ¿Cuál de los siguientes comandos encuentra todos los estudiantes que tengan nacionalidad “aleman”:
 Seleccione una:
-a. db.students.find( { “nacionalidad.*”: “aleman” })
-b. db.students.find( { “nacionalidad.0”: “aleman” })
+a. db.students.find( { “nacionalidad.*”: “aleman” }) n
+b. db.students.find( { “nacionalidad.0”: “aleman” }) n
 c. n/a
-d. db.students.findInArray( { nacionalidad: “aleman” })
-e. db.students.find( { nacionalidad: “aleman” })
+d. db.students.findInArray( { nacionalidad: “aleman” }) n
+e. db.students.find( { nacionalidad: “aleman” }) y
 
 Tengo una colección students ¿Con cuál de las siguientes queries añadiría un campo con clave “mayor” y valor el booleano true a todos los estudiantes que tengan igual o más de 18 años?
 Seleccione una:
-a. db.students.update( { { age: {$gt: 18}}}, { $set: { mayor: “true” } }, { multi: true })
+a. db.students.update( { { age: {$gt: 18}}}, { $set: { mayor: “true” } }, { multi: true }) n
 b. n/a
-c. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: “true” } })
-d. db.students.update( { { gte: {$age: 18}}}, { $set: { mayor: “true” } })
-e. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: true } }, { multi: true })
+c. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: “true” } }) no multi
+d. db.students.update( { { gte: {$age: 18}}}, { $set: { mayor: “true” } }) no
+e. db.students.update( { { age: {$gte: 18}}}, { $set: { mayor: true } }, { multi: true }) y
 
 ¿Qué devuelve el siguiente comando? db.students.find( { direccion.numero: 79 )
 Seleccione una:
-a. Todos los estudiantes que tengan un campo llamado “direccion.numero” con valor 79
+a. Todos los estudiantes que tengan un campo llamado “direccion.numero” con valor 79 no
 b. n/a
-c. Dará un error de sintaxis al ejecutarse porque al usar la notación punto en la clave es obligatorio ponerla entre comillas
-d. Todos los estudiantes que tengan un campo numero con valor 79
-e. Todos los estudiantes que tengan un campo numero con valor 79, estando este número dentro de un objeto con clave “direccion” así: {direccion: {numero: 79}}
+c. Dará un error de sintaxis al ejecutarse porque al usar la notación punto en la clave es obligatorio ponerla entre comillas y
+d. Todos los estudiantes que tengan un campo numero con valor 79 n
+e. Todos los estudiantes que tengan un campo numero con valor 79, estando este número dentro de un objeto con clave “direccion” así: {direccion: {numero: 79}} n
 
 Tengo una colección students ¿Con cuál de las siguientes queries añadiría un campo con clave “pagado” y valor “si” a todos los estudiantes?
 Seleccione una:
-a. db.students.update( { * }, { $set: { pagado: “si” } }, { all: true })
-b. db.students.update( { }, { $set: { pagado: “si” } }, { multi: true })
-c. db.students.update( { * }, { $set: { pagado: “si” } }, { multi: true })
-d. db.students.update( { * }, { $set: { pagado: “si” } })
+a. db.students.update( { * }, { $set: { pagado: “si” } }, { all: true }) no, need multi
+b. db.students.update( { }, { $set: { pagado: “si” } }, { multi: true })  n
+c. db.students.update( { * }, { $set: { pagado: “si” } }, { multi: true }) y
+d. db.students.update( { * }, { $set: { pagado: “si” } }) n
 e. n/a
 
 Sea una base de datos MongoDB, en la que la respuesta a la query db.products.findOne() devuelve lo siguiente:
@@ -516,34 +516,34 @@ Sea una base de datos MongoDB, en la que la respuesta a la query db.products.fin
 Que hace la siguiente query MongoDB:
 db.products.remove({pieces: {$in: [12, 84]}})
 Seleccione una:
-a. Borra los productos que tengan las dos piezas, 12 y 84
-b. Da un error de ejecución porque no ha puesto una condición de búsqueda
-c. Borra los productos que tengan una de las piezas 12 u 84
-d. Borra las piezas 12 y 84 de todos los productos
+a. Borra los productos que tengan las dos piezas, 12 y 84 n
+b. Da un error de ejecución porque no ha puesto una condición de búsqueda n
+c. Borra los productos que tengan una de las piezas 12 u 84 y 
+d. Borra las piezas 12 y 84 de todos los productos n
 
 ¿Cuál de los siguientes documentos sería devuelto por la siguiente query?
 db.users.find( { friends : { $all : [ "Joe" , "Bob" ] }, favorites : { $in : [ "running" , "pickles" ] } }
-Seleccione una:
-a. { name : "Cliff" , friends : [ "Pete" , "Joe" , "Tom" , "Bob" ] , favorites : [ "pickles", "cycling" ] }
-b.{ name : "Harry" , friends : [ "Joe" , "Bob" ] , favorites : [ "hot dogs", "swimming" ] }
-c.{ name : "William" , friends : [ "Bob" , "Fred" ] , favorites : [ "hamburgers", "running" ] }
-d.{ name : "Stephen" , friends : [ "Joe" , "Pete" ] , favorites : [ "pickles", "swimming" ] }
+Seleccione una: => los que tengan Joe y bob y tatno uno de los dos en in
+a. { name : "Cliff" , friends : [ "Pete" , "Joe" , "Tom" , "Bob" ] , favorites : [ "pickles", "cycling" ] } y
+b.{ name : "Harry" , friends : [ "Joe" , "Bob" ] , favorites : [ "hot dogs", "swimming" ] } n
+c.{ name : "William" , friends : [ "Bob" , "Fred" ] , favorites : [ "hamburgers", "running" ] }n
+d.{ name : "Stephen" , friends : [ "Joe" , "Pete" ] , favorites : [ "pickles", "swimming" ] } n
 
 ¿Qué devuelve el siguiente comando? db.students.find( { ‘records.0’: ‘passed’ } )
 Seleccione una:
-a.Todos los estudiantes cuyo primer elemento del array “records” contiene el string “passed”
+a.Todos los estudiantes cuyo primer elemento del array “records” contiene el string “passed” y
 b.n/a
-c.Todos los estudiantes cuyo array “records” contiene el string “passed”
-d.Todos los estudiantes cuyo primer elemento del array “passed” contiene el string “records”
-e.Dará un error de sintaxis al ejecutarse porque la clave no se puede escribir con comillas
+c.Todos los estudiantes cuyo array “records” contiene el string “passed” n
+d.Todos los estudiantes cuyo primer elemento del array “passed” contiene el string “records” n
+e.Dará un error de sintaxis al ejecutarse porque la clave no se puede escribir con comillas n
 
 En una colección llamada posts que contiene 1000 documentos que hace el siguiente comando?
   db.posts.find().skip(5).limit(5)
 Seleccione una:
-a.Se salta los primeros 5 documentos y devuelve el sexto documento que encuentra en un array repetido 5 veces
-b.Skip y limit se anulan uno a otro y por lo tando devuelve los primeros 5 documentos
-c.Se salta los primeros 5 documentos y devuelve del 6 al 11
-d.Limita los 5 primeros documentos (gracias a la sentencia limit(5)) y se salta los 5 siguiente, devolviendo del 11 al 15
+a.Se salta los primeros 5 documentos y devuelve el sexto documento que encuentra en un array repetido 5 veces n
+b.Skip y limit se anulan uno a otro y por lo tando devuelve los primeros 5 documentos n
+c.Se salta los primeros 5 documentos y devuelve del 6 al 11 y
+d.Limita los 5 primeros documentos (gracias a la sentencia limit(5)) y se salta los 5 siguiente, devolviendo del 11 al 15 n
 
 Sea una base de datos MongoDB, en la que la respuesta a la query db.products.findOne() devuelve lo siguiente:
 { _id: "23",  price: 55, name: "Kivik",  status: "available", pieces: [12, 84, 45] }
@@ -551,18 +551,18 @@ Que hacen las siguientes dos queries:
 db.products.update({name: "Kivik"}, {$pull: {pieces: 12}}, {multi: true} )
 db.products.update({{_id: "23"}, {$push: {pieces: 122}}, {multi: true} })
 Seleccione una:
-a.Se sustituye en todos los elementos de nombre "Kivik" la pieza 12 por la 122
-b.Se sustituye en el elemento que había devuelto el findOne() la pieza 12 por la 122
-c.Se borra de todos los elementos de nombre "Kivik" la pieza número 12 y se inserta en el elemento que había devuelto el findOne() la pieza con id 122
-d.Se sustituye la pieza 12 por la 122 en todos los elementos de la colección
+a.Se sustituye en todos los elementos de nombre "Kivik" la pieza 12 por la 122, n
+b.Se sustituye en el elemento que había devuelto el findOne() la pieza 12 por la 122, n there's a mult = true
+c.Se borra de todos los elementos de nombre "Kivik" la pieza número 12 y se inserta en el elemento que había devuelto el findOne() la pieza con id 122 y
+d.Se sustituye la pieza 12 por la 122 en todos los elementos de la colección n
 
 ¿Qué es un indice multiclave en una colección en MongoDB y qué hace falta para crearlo?
 Seleccione una:
 a.n/a
-b.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos solo hay que indicar los campos que se desee así: db.records.createIndex( { name: 1, age: -1 } )
-c.Es un índice sobre un campo que contiene como valor un array, para crearlo usamos la notación punto y la posición del array sobre la que se quiere crear el índice, empezando en 0 la primera posición
-d.Es un índice sobre un campo que contiene como valor un array, no hace falta hacer nada especial para crearlo, si el campo es array el índice creado sobre ese campo es multiclave
-e.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos no hace falta hacer nada especial, si doy dos órdenes createIndex, MongoDB las combina y las optimiza y crea un índice multiclave
+b.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos solo hay que indicar los campos que se desee así: db.records.createIndex( { name: 1, age: -1 } ) y
+c.Es un índice sobre un campo que contiene como valor un array, para crearlo usamos la notación punto y la posición del array sobre la que se quiere crear el índice, empezando en 0 la primera posición n no notación punto
+d.Es un índice sobre un campo que contiene como valor un array, no hace falta hacer nada especial para crearlo, si el campo es array el índice creado sobre ese campo es multiclave n no es un ídnice sobreun campo que continee un array
+e.Es un índice sobre varios campos a la vez, sirven para optimizar queries realizadas sobre varios campos, para crearlos no hace falta hacer nada especial, si doy dos órdenes createIndex, MongoDB las combina y las optimiza y crea un índice multiclave, n no son dos órdenes create Index
 
 -------------
 
