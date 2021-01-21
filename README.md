@@ -434,7 +434,10 @@ db.persona.aggregate({
 Se definen distitnos pipeline para agregar enuna query:
 
 ```
-
+format = {
+ $project:
+   
+}
 ```
 
 
