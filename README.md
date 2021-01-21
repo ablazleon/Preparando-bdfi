@@ -398,6 +398,8 @@ Sobre esta base de datos se pide lo siguiente:
 a) Haga un diagrama conceptual del escenario desarrollado.
 b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y ficheros a modificar en su caso) para modificar los datos almacenados en la Base de Datos, prescindiendo por completo de los datos actuales y cargando unos nuevos datos disponibles en un fichero llamado zips_nuevo.json
 
+**¿Cuál es la diferencia entre una solución de sistema gestor de base de datos NoSQL y una SQL? ¿Cómo una solución u otra puede ser más aconsejada para distitnos casos de uso?**
+
 # Tests
 
 ¿Qué tipos de bases de datos NoSQL hay?
@@ -569,43 +571,43 @@ e.Es un índice sobre varios campos a la vez, sirven para optimizar queries real
 ¿Cúal de las siguientes afirmaciones es correcta en cuanto a replicación de líder individual?
 Seleccione una:
 a. n/a
-b. Los seguidores solo pueden usarse para procesar peticiones de escritura
-c. Solo el líder acepta peticiones de escritura
-d. La mayor desventaja del líder individual es la gestión de conflictos
-e. Solo el líder acepta peticiones de lectura
+b. Los seguidores solo pueden usarse para procesar peticiones de escritura, n 
+c. Solo el líder acepta peticiones de escritura, y
+d. La mayor desventaja del líder individual es la gestión de conflictos, n is the certain latency/less availabilty
+e. Solo el líder acepta peticiones de lectura, n
 
 El particionamiento con MongoDB es:
 Seleccione una:
 a. n/a
-b. No se puede hacer particionamiento con MongoDB
-c. de líder múltiple asíncrono
-d. Algorítmica
-e. Dinámica pero permite definir un set inicial de shards
+b. No se puede hacer particionamiento con MongoDB, n
+c. de líder múltiple asíncrono, n
+d. Algorítmica, n
+e. Dinámica pero permite definir un set inicial de shards, y
 
 Si he configurado un replicastet en un conjunto de servidores de MongoDB y luego añado otro usando el siguiente comando en la shell de Mongo:
 rs.add({ host: "mongodb.net:27017", slaveDelay: 5})
 ¿Cuál de las siguientes afirmaciones es correcta ?
 Seleccione una:
 a. n/a
-b. EL nuevo servidor agregado replicará los datos pero con un retardo de 5 segundos.
-c. El servido se agrega con una prioridad de 5.
-d. El nuevo servidor forzará la lección de un nuevo primario después de 5 segundos.
-e. El servidor pasará a formar parte del conjunto de réplicas después de 5 segundos.
+b. EL nuevo servidor agregado replicará los datos pero con un retardo de 5 segundos. y 
+c. El servido se agrega con una prioridad de 5. n, not priority
+d. El nuevo servidor forzará la lección de un nuevo primario después de 5 segundos. not leader election
+e. El servidor pasará a formar parte del conjunto de réplicas después de 5 segundos. n
 
 Si he configurado un replicaset en un conjunto de servidores de MongoDB y luego se quiere añadir otro servidor como Arbitro, ¿Cuál de los siguientes comandos es válido para realizar ese procedimiento?:
 Seleccione una:
-a. rs.add({ host: "mongodb.net:27017", arbiterOnly: 5})
-b. rs.add({ host: "mongodb.net:27017", priority: 5})
-c. rs.add({ host: "mongodb2.example.net:27017",hidden:true})
-d. rs.addArb("mongodb2.example.net:27017")
+a. rs.add({ host: "mongodb.net:27017", arbiterOnly: 5}) n
+b. rs.add({ host: "mongodb.net:27017", priority: 5}) n
+c. rs.add({ host: "mongodb2.example.net:27017",hidden:true}) n
+d. rs.addArb("mongodb2.example.net:27017") y
 e. n/a
 
 ¿Cúal de las siguientes afirmaciones sobre Particionamiento es correcta?
 Seleccione una:
-a. No se puede aplicar replicación a datos particionados
-b. Todas las escrituras van al nodo primario.
-c. En la partición algorítmica, se usa un servicio de localización para ubicar los datos
-d. Cumple el requisito de aumento del tamaño de los datos (escalado horizontal).
+a. No se puede aplicar replicación a datos particionados n
+b. Todas las escrituras van al nodo primario. n
+c. En la partición algorítmica, se usa un servicio de localización para ubicar los datos n
+d. Cumple el requisito de aumento del tamaño de los datos (escalado horizontal). y
 e. n/a
 
 ¿El siguiente código permite establecer una conexión a una base de datos llamada test en MongoDB :
@@ -613,47 +615,47 @@ var mongoose = require('mongoose'); mongoose.connect('mongodb://localhost/test')
 Si esa base de datos no ha sido creada previamente , ¿Cuál de las siguientes afirmaciones sería correcta?
 Seleccione una:
 
-a. La aplicación devuelve un error de sintaxis.
-b. Al momento de establecer la conexión se crea esa base de datos, si esta no existe previamente.
-c. Se muestra un error en el terminal indicando que la base de datos no existe.
-d. La aplicación devuelve un mensaje de error de "Connection refused"
+a. La aplicación devuelve un error de sintaxis. n
+b. Al momento de establecer la conexión se crea esa base de datos, si esta no existe previamente. n
+c. Se muestra un error en el terminal indicando que la base de datos no existe. n
+d. La aplicación devuelve un mensaje de error de "Connection refused" y
 e. n/a
 
 Para crear el esquema llamado 'UserSchema' con Moongosoe, con los campos nombre, apellido y edad, debemos ejecutar:
 Seleccione una:
-a. const UserSchema = new mongoose.Schema([ nombre, apellido, edad] )
+a. const UserSchema = new mongoose.Schema([ nombre, apellido, edad] ) n
 b. n/a
-c. const UserSchema = new mongoose.Schema({ nombre: String, apellido: String, edad: Number})
-d. const UserSchema = new mongoose.InsertIntoSchemas({ nombre: String, apellido: String, edad: Number})
-e. const UserSchema = new User({ nombre: String, apellido: String, edad: Number})
+c. const UserSchema = new mongoose.Schema({ nombre: String, apellido: String, edad: Number}) y
+d. const UserSchema = new mongoose.InsertIntoSchemas({ nombre: String, apellido: String, edad: Number}) n
+e. const UserSchema = new User({ nombre: String, apellido: String, edad: Number}) n
 
 Tenemos un modelo de usuarios llamado “User" con atributos “id", “nombre" y “edad". Nuestra aplicación usa Mongoose como ODM para gestionar los datos. Si quiero borrar todos los usuarios cuyo nombre es igual a "carlos" tengo que escribir?:
 Seleccione una:
-a. await User.deleteOne({where: {nombre: "Carlos"}});
+a. await User.deleteOne({where: {nombre: "Carlos"}}); n
 b. n/a
-c. await User.deleteMany({if: {nombre: "Carlos"}});
-d. await User.deleteMany({nombre: "Carlos"});
-e. await User.deleteOne({nombre: "Carlos"});
+c. await User.deleteMany({if: {nombre: "Carlos"}}); n
+d. await User.deleteMany({nombre: "Carlos"}); y
+e. await User.deleteOne({nombre: "Carlos"}); n
 
 La replicación con MongoDB es:
 Seleccione una:
 a. n/a
-b. De líder individual síncrona
-c. de líder múltiple
-d. No se puede hacer replicación con MongoDB
-e. De líder individual asíncrona
+b. De líder individual síncrona m
+c. de líder múltiple m
+d. No se puede hacer replicación con MongoDB n
+e. De líder individual asíncrona y
 
 Tenemos un modelo de usuarios llamado “User" con atributos “id", “nombre" y “edad". Nuestra aplicación usa Mongoose como ODM para gestionar los datos. Si quiero buscar todos los usuarios cuya edad es 15 ¿Que tengo que escribir?
 Seleccione una:
 a. n/a
-b. await User.save({ edad: 15 }
-c. await User.findOne({ edad: 15 }
-d. await User.deleteMany({ edad: 15 }
-e. await User.find({ edad: 15 })
+b. await User.save({ edad: 15 } n
+c. await User.findOne({ edad: 15 } n
+d. await User.deleteMany({ edad: 15 } n
+e. await User.find({ edad: 15 }) y
 
 -----------
 
 # Mi cosecha
 
-**¿Cuál es la diferencia entre una solución de sistema gestor de base de datos NoSQL y una SQL? ¿Cómo una solución u otra puede ser más aconsejada para distitnos casos de uso?**
+
 
