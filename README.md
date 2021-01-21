@@ -356,11 +356,29 @@ E (else o en caso contrario) -> L (o baja latencia en el acceso) o (consistencai
 
 **Pregunta 1 (1pt) – ¿Qué es un índice de una base de datos? ¿Cuándo necesitaré un índice en una base de datos? Ponga un ejemplo.**
 
+Es un valor que permite acceder a los ditintos almacenes de datos. Se necesitará este íodnice para oeoprar sobre la bbdd: por ejemplo en sql los ínidces son las claves primarios y ajenas. En mongo se crean.
+
 **Pregunta 2 (1pt) - Modelo ACID. Enúncialo y descríbelo especificando que significa cada letra A, C, I y D.**
+
+El modelo ACID describe ciertas carácter´siticas de cómo deben ser las transacciones en los sistemas gestores de basos:
+
+A - atómicas: es decir que no exista estados intermedios entre que una transacción se haya realizado o no
+
+C- consistentes, es diecr que el estado al que se llegue no viole ninguna restricción de integridad.
+
+I - íntiegra: que cada transacción auqnue sea concurrente, sea idnependiente.
+
+D- durable : si las modificaiones que realiza una transacción pueden ser revertidas si el sistema falla.
 
 **Pregunta 3 (1pt) - ¿Cuantos tipos de BBDD NoSQL hay? Pon un ejemplo de tecnología de cada una. Sitúa los diferentes tipos sobre un gráfico en el que las Xs son “Complejidad de los datos” y las Ys “Tamaño de los datos”**
 
+Se identifican disintos tipos de sistemas gestores de bbdd, y a contianución se organizan estos en un gráfico en el que las X sea la compeljidfad de lso datos e Y sea el tamaño.
+
+Clave valor, columnas, documentos, grafos
+
 **Pregunta 4 (1pt) - Explique las ventajas que ofrece el uso de un servicio REST como interfaz para proporcionar acceso a los datos almacenados en una Base de Datos**
+
+Fácil intergar con la web.
 
 ```
 {
@@ -383,20 +401,48 @@ E (else o en caso contrario) -> L (o baja latencia en el acceso) o (consistencai
 Sobre esta base de datos se pide lo siguiente:
 **Pregunta 5 (0,5pt) – Escriba una query en MongoDB para obtener el número de personas que tienen como afición el tenis:**
 
+db.persona.find({aficiones: {$in: tenis}}).count()
+
 **Pregunta 6 (0,5pts) – Escriba una query en MongoDB para obtener el número de personas que miden más de 180cm y tienen igual o menos de 35 años:**
+
+db.persona.find({$and:
+ [
+ {altura: {$gt: 180}},
+ {edad: {$lte: 35} } 
+ ]
+})
 
 **Pregunta 7(0,5pts) - Escriba la query de MongoDB para obtener las 5 personas más altas:**
 
+db.persona.sort({altura: 1}).limit(5)
+
 **Pregunta 8 (0,5pts)– Queremos cambiar el registro que nos ha devuelto el findOne porque Enrique Barra nos ha notificado de un cambio de dirección. Ahora vive en “Calle Abeto, 15” en “Alcobendas”. Escriba la instrucción en MongoDB para editar el registro introducir estos datos.**
 
+db.persona.update(
+ {name: "Enrique Barra"},
+ {$set: {calle: “Calle Abeto", numero:122, ciudad: "Alcobendas" }
+)
 
 **Pregunta 10 (1pt)- En nuestro sistema tenemos una llamada perdida del número 659232323. Escriba una query en MongoDB para buscar a la/s personas que tengan ese número de móvil.**
 
-**Pregunta 11 (1pt)- Escriba una query que devuelva un documento con un campo “num” con cuantas personas hay y un campo “altura_media” con la altura media de las personas que vivan en la calle “Sor Angela de la Cruz” en “Madrid”**
+db.persona.aggregate({
+  {$match: { formas_contacto.type: {$eq: 659232323}}
+})
+
+**Pregunta 11 (1pt)- Escriba una query que devuelva un documento con un campo “num” con cuantas personas hay y unformat campo “altura_media” con la altura media de las personas que vivan en la calle “Sor Angela de la Cruz” en “Madrid”**
+
+Se definen distitnos pipeline para agregar enuna query:
+
+```
+
+```
+
 
 **Pregunta 12 (1pt) - Sobre la práctica ReplicaSet propuesta en la asignatura:
 a) Haga un diagrama conceptual del escenario desarrollado.
 b) Explique qué pasos seguiría (con el detalle de los comandos a ejecutar y ficheros a modificar en su caso) para modificar los datos almacenados en la Base de Datos, prescindiendo por completo de los datos actuales y cargando unos nuevos datos disponibles en un fichero llamado zips_nuevo.json
+
+-------
 
 **¿Cuál es la diferencia entre una solución de sistema gestor de base de datos NoSQL y una SQL? ¿Cómo una solución u otra puede ser más aconsejada para distitnos casos de uso?**
 
